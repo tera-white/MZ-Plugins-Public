@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: サポート方針を確認する
+    url: https://github.com/tera-white/MZ-Plugins-Public/blob/main/support.md
+    about: 対応範囲、動作保証、不具合報告についての方針をご確認ください。

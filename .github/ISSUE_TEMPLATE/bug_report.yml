@@ -1,0 +1,69 @@
+name: 不具合を報告する
+description: 分かる範囲で、プラグインの不具合をご報告ください。
+title: "[不具合] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ご報告の前に
+        不具合のご報告は歓迎しています。**返信・調査・修正・個別対応を保証するものではありません。**
+
+        **個人情報、パスワード、秘密情報、有料素材などは投稿しないでください。** スクリーンショットやログにも、これらの情報が含まれていないか確認してください。
+
+        **このリポジトリが公開された後は、GitHub Issuesの投稿内容は原則として誰でも閲覧できます。** 非公開の間に投稿した内容も、リポジトリが公開されると閲覧可能になる場合があります。
+
+        詳しい対応範囲は、[サポート方針](https://github.com/tera-white/MZ-Plugins-Public/blob/main/support.md)をご確認ください。
+
+        GitHubアカウントでのログインが必要です。タイトルには症状を短く書いてください。分からない項目は空欄で構いません。必須のプラグイン名が分からない場合は「不明」と入力してください。
+  - type: input
+    id: plugin_name
+    attributes:
+      label: 対象プラグイン名
+      description: 日本語の名前でも、T_から始まるIDでも大丈夫です。
+      placeholder: "例：継続ドレイン（T_StateDrain）／不明"
+    validations:
+      required: true
+  - type: input
+    id: plugin_version
+    attributes:
+      label: プラグインのバージョン（分かれば）
+      description: 分からない場合は空欄で構いません。
+      placeholder: "例：1.1.6"
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: 発生した症状
+      description: 何が起きたか、普段の言葉で教えてください。短い説明でも大丈夫です。
+      placeholder: "例：戦闘が終わるとエラーが表示され、ゲームが止まります。"
+    validations:
+      required: true
+  - type: textarea
+    id: situation
+    attributes:
+      label: 発生時の操作・状況（分かれば）
+      description: どの画面で何をしたときに起きましたか？ 分かる範囲でご記入ください。
+      placeholder: "例：敵を倒した直後に発生しました。"
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順（分かれば）
+      description: 同じ症状を起こせる操作が分かれば教えてください。番号付きでなくても大丈夫です。
+      placeholder: "例：特定のステートを付けてから戦闘を終えると発生します。"
+  - type: textarea
+    id: error_logs
+    attributes:
+      label: エラーメッセージ・ログ（あれば）
+      description: 表示された文章を貼り付けてください。個人情報や秘密情報が入った部分は投稿しないでください。無ければ空欄で構いません。
+      render: text
+  - type: textarea
+    id: other_plugins
+    attributes:
+      label: 関連する他プラグイン（分かれば）
+      description: 関係しそうなプラグインが分かれば教えてください。すべてを調べたり、一覧を揃えたりする必要はありません。
+      placeholder: "例：ほかのHP再生プラグインも使っています（名前は不明です）。"
+  - type: input
+    id: mz_version
+    attributes:
+      label: RPGツクールMZのバージョン（分かれば）
+      description: 分からない場合は空欄で構いません。
+      placeholder: "例：1.x.x"
