@@ -29,3 +29,15 @@
 .report-contact .button{max-width:100%;min-height:48px;text-align:center}
 .report-contact .button span{display:block;font-size:14px;margin-top:4px}
 @media(max-width:580px){.report-contact{padding:16px}.report-contact .button{display:block;width:100%;padding:12px}}
+/* Plugin examples: local images retain their natural size and aspect ratio. */
+.media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start}
+.media-grid.media-single{grid-template-columns:minmax(0,1fr);max-width:960px;margin-inline:auto}
+.media-item{margin:0;min-width:0;overflow-wrap:anywhere}
+.media-item h3{margin:0 0 16px;font-size:1.1em}
+.media-image-link{display:block;width:fit-content;max-width:100%;margin-inline:auto}
+.media-image{display:block;max-width:100%;width:auto;height:auto;margin-inline:auto}
+.media-pixelated{image-rendering:pixelated}
+.media-item figcaption,.media-video-note{margin:14px 0 0;line-height:1.8}
+.media-video{display:block;width:100%;aspect-ratio:16/9;height:auto;border:1px solid var(--line);border-radius:6px}
+.media-image-link:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+@media(max-width:720px){.media-grid{grid-template-columns:minmax(0,1fr)}}
