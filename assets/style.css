@@ -41,3 +41,14 @@
 .media-video{display:block;width:100%;aspect-ratio:16/9;height:auto;border:1px solid var(--line);border-radius:6px}
 .media-image-link:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 @media(max-width:720px){.media-grid{grid-template-columns:minmax(0,1fr)}}
+/* Opt-in video thumbnail prototype; existing media selectors remain unchanged. */
+.video-thumbnail{aspect-ratio:16/9;background:#142522;border-radius:6px;overflow:hidden}
+.video-thumbnail-trigger{position:relative;display:block;width:100%;height:100%;padding:0;border:0;background:#142522;color:#fff;cursor:pointer;font:inherit}
+.video-thumbnail-trigger img{display:block;width:100%;height:100%;object-fit:contain}
+.video-thumbnail-trigger img[hidden]{display:none}
+.video-thumbnail-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:84px;height:60px;border:2px solid #fff;border-radius:14px;background:#b91c1c;color:#fff;font-size:32px;box-shadow:0 2px 14px #0009}
+.video-thumbnail-label{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);padding:4px 12px;border-radius:4px;background:#142522e8;color:#fff;white-space:nowrap;font-size:16px}
+.video-thumbnail-trigger:hover .video-thumbnail-play{background:#991b1b}
+.video-thumbnail-trigger:focus-visible{outline:4px solid #facc15;outline-offset:-6px}
+.video-thumbnail .media-video{height:100%;border:0;border-radius:0}
+@media(max-width:580px){.video-thumbnail-play{width:68px;height:48px;font-size:26px}.video-thumbnail-label{bottom:8px;font-size:14px}}
